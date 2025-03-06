@@ -1,0 +1,11 @@
+                                      Javascript execution context
+    
+    It is basically how Javascript will run the code files
+
+    Basically below are the execution context
+         1) global exectuion context - this varibale will be given to globla ec
+         2) function exectuion context
+         3) is optional - eval exectuion context 
+
+    It basically divides the exectuion into 2 phases
+

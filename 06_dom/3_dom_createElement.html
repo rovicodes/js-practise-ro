@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Create Element</title>
+</head>
+<body>
+    
+</body>
+<script>
+       const div = document.createElement('div')
+       div.className = "mainDiv"
+       div.id = "mainId"
+       div.setAttribute("title", "Main Title")
+       //div.innerText = "Adding text using innerText" // this will do 2 round trips
+       const addText = document.createTextNode("Adding text using text Node")
+       div.appendChild(addText)
+       div.style.backgroundColor = "orange"
+       //console.log(div)
+       document.body.appendChild(div)
+
+       const h2 = document.createElement('h2')
+       
+       const h2Text = document.createTextNode("dom h2")
+        h2.appendChild(h2Text)
+       document.querySelector('.mainDiv').appendChild(h2)
+       
+       console.log(h2)
+
+</script>
+</html>

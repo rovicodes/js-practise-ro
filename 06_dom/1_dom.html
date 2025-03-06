@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learning</title>
+    <style>
+        .bg-color{
+            background-color: #212121;
+            color: #fff
+        }
+    </style>
+</head>
+<body class="bg-color">
+    <div >
+        <h1 id="heading1" class="heading">Document object Model Leaning <span style="display: none;">I am inside span</span></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li  class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<!-- document.getElementById('heading1')
+<h1 id=​"heading1" class=​"heading">​Document object Model Leaning​</h1>​
+document.getElementById('heading1').getAttribute('heading')
+null
+document.getElementById('heading1').getAttribute('class')
+'heading'
+document.getElementById('heading1').setAttribute('class', 'rovin')
+undefined -->
+
+<!-- 
+*   query selector will always fetch the first tag
+document.querySelector('ul').querySelector('li').style.backgroundColor = 'green' 
+-->
+
+<!-- to convert anything to array
+  Array.from(Name) 
+ 
+ const allLi = document.getElementsByClassName('list-item')
+
+const convertLICollectionToArray = Array.from(allLi)
+
+convertLICollectionToArray.forEach((item) => { item.style.color = 'green'} )
+
+ -->

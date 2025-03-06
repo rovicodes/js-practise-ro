@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Edit element</title>
+</head>
+<style>
+    body{
+        background-color: #212121;
+        color: #fff;
+    }
+</style>
+<body>
+    <ul class ="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(addLang){
+        const li = document.createElement('li')
+        li.innerHTML = addLang // inner html is not optimzied because it will travese the whole html tree to get the innerhtml and then add innerhtml text
+        document.querySelector('.language').appendChild(li)
+    }
+   addLanguage('python')
+
+   function addOptimizedLanguage(langName){
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(langName)) // this is more optimized way because this will directly append the textnode created to the element
+    document.querySelector('.language').appendChild(li)
+   } 
+   addOptimizedLanguage('goLang')
+
+   //Edit
+   const secondLang = document.querySelector("li:nth-child(2)");
+   const newLi = document.createElement('li')
+   newLi.appendChild(document.createTextNode("mojo"))
+   secondLang.replaceWith(newLi)
+
+
+   const firstLang = document.querySelector("li:first-child")
+   firstLang.outerHTML = '<li>TypeScript</li>'
+
+   //remove
+
+   const lastLang = document.querySelector('li:last-child')
+   lastLang.remove()
+
+</script>
+</html>

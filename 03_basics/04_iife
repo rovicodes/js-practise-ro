@@ -1,0 +1,11 @@
+//immediatley invoked function expression
+
+const name = "Rovin"; // if there is a iife function in scope then varibale should have ;
+
+(function iifeExample() {
+    console.log("this is a named iffe function")
+})(); //if there are multiple iffe functions then the scope of the iiffe function should be ended using a semi colon, or else it will error out
+
+((name) => {
+    console.log(`this is not a named iife function ${name}`)
+})(name);

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+</head>
+<body>
+   <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+   </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent.children) // .children will give an html collection for this, basically it will return all the children in html collection
+         
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i])     
+    // }
+
+    parent.children[2].style.color = "orange"
+
+    // console.log(parent.firstElementChild); // gives first element within the parents children
+    // console.log(parent.lastElementChild); // gives last element within the parents children
+
+    const childOne = document.querySelector('.day') //querySelector will always select the first element in the .day class
+
+    console.log(childOne.parentElement) // gives the parent element for that particular child
+
+    console.log(childOne.nextElementSibling); //  give the next sibling
+
+    console.log(parent.childNodes); // it will return a complex tree structure, chai aur code video 33 | 16:00mins
+    
+    
+ 
+
+    
+    
+
+</script>
+</html>
