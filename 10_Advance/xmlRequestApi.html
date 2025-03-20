@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const githubUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest()
+    const bodyObj = document.querySelector('body')
+    xhr.open('GET', githubUrl)
+    xhr.responseType = 'json'
+
+    function postCard(userInfo){
+         bodyObj.innerHTML = `<h2>${userInfo.followers}</h2>
+    <img src="${userInfo.avatar_url}" alt="">`
+    }
+
+    xhr.onreadystatechange = () => {     
+         if(xhr.readyState === 4){
+             const userInfo =  xhr.response
+             postCard(userInfo)
+         }
+    }
+    xhr.send()
+</script>
+</html>
