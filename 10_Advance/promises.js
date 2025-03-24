@@ -61,8 +61,7 @@ promiseFour
 
   //promise 5
 
-  const promiseFive = new Promise(function(resolve,reject){
-     
+  const promiseFive = new Promise(function(resolve,reject){    
     setTimeout(() => {       
        let error = true
        if(!error)
@@ -85,3 +84,16 @@ async function consumePromiseFive() {
 }
 
 consumePromiseFive()
+
+//next
+async function getAllUsers(){
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users')
+        const data = await response.json()
+        console.log(data);
+    } catch (error) {
+        console.log("E: ", error);
+    }
+}
+
+getAllUsers()
