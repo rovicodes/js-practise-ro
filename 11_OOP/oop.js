@@ -26,5 +26,5 @@ const userOne = new User("Rovin",true,10 )
 const userTwo = new User("Lizzia",true,10 )
 console.log(userOne)
 console.log(userTwo)
-console.log(userTwo.greeting);
+console.log(userTwo.greeting());
 
